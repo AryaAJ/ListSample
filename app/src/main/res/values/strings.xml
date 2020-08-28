@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">List SampleApp</string>
+    <string name="no_network_connectivity">No Network Connectivity</string>
+    <string name="no_data_found">No Data Found in Cache</string>
+    <string name="no_data">No data found</string>
+    <string name="image">Image</string>
+</resources>
