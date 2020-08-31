@@ -55,10 +55,10 @@ class ListRepositoryImpl(
     override suspend fun getListfromDB(): ApiResponse<MainList> {
         return withContext(Dispatchers.IO) {
             val mainList = dao.getList()
-            if (mainList.rows.isNullOrEmpty())
-                context.noDataFound()
-            else {
+            if (mainList!=null && mainList.rows!=null && !mainList.rows.isNullOrEmpty())
                 ApiResponse.Success(dao.getList())
+            else {
+                context.noDataFound()
             }
         }
     }

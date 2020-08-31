@@ -55,11 +55,6 @@ class ListViewModel @ViewModelInject constructor(private val listRepository: Rep
      */
     private fun showPlacesOnSuccess(mainList: MainList) {
         viewModelScope.launch(Dispatchers.Main) {
-
-
-//            mainList.rows.filter {
-//                return if (!it.title.isNullOrEmpty()) else it
-//            }
             this@ListViewModel.mainList.postValue(mainList)
         }
     }

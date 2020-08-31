@@ -76,6 +76,7 @@ class ListFragment : Fragment() {
             if (it != null) {
                 (activity as MainActivity?)?.setToolbarText(it.title)
                 if (it.rows.isNotEmpty()) {
+                    hideErrorLayout()
                     adapter.setVenueListData(it.rows)
                     Toast.makeText(activity, "Item/s added", Toast.LENGTH_LONG).show()
                     bind.list.post { bind.list.scrollToPosition(0) }
@@ -85,8 +86,9 @@ class ListFragment : Fragment() {
 
         viewModel.showError.observe(viewLifecycleOwner, Observer {
             it?.let {
+                showErrorLayout(it)
                 refresh.isRefreshing = false
-                Toast.makeText(activity, it, Toast.LENGTH_LONG).show()
+                //Toast.makeText(activity, it, Toast.LENGTH_LONG).show()
                 progressBar.visibility = View.GONE
             }
         })
@@ -107,5 +109,14 @@ class ListFragment : Fragment() {
      * @param row     Venue Item on which click event had happened
      */
     private fun itemClicked(row: Row) {
+    }
+
+    private fun hideErrorLayout(){
+        error_constraint.visibility = View.GONE
+    }
+
+    private fun showErrorLayout(error : String){
+        error_constraint.visibility = View.VISIBLE
+        tv_error.text = error + "\n Pull to refresh"
     }
 }
