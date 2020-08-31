@@ -1,4 +1,4 @@
-# Read Me Template
+# List Sample App
 
 ### Table of Contents
 
@@ -33,8 +33,8 @@ Retrofit for network calls and UI and Unit testing with Espresso, Mockito and JU
 ---
 
 ## Open-source libraries
- [Lottie](https://github.com/airbnb/lottie-android#readme)
- [Picasso](https://github.com/square/picasso#readme)
+- [Lottie](https://github.com/airbnb/lottie-android#readme)
+- [Picasso](https://github.com/square/picasso#readme)
 
 [Back To The Top](#read-me-template)
 
