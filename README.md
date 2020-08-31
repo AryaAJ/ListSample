@@ -24,6 +24,7 @@ Retrofit for network calls and UI and Unit testing with Espresso, Mockito and JU
 - Retrofit 2
 - Hilt
 - Picasso
+- Lottie
 
 - UI Tests - Espresso
 - Unit Tests - Mockito and JUnit
